@@ -575,6 +575,7 @@ button{
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .modal.is-open{
@@ -584,15 +585,19 @@ button{
 }
 
 .modal-wrapper{
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 4px;
   width: 408px;
   height: 80%;
-  max-height: 584px;
+  min-height: 584px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background-color: #fcfcfc;
   overflow: auto;
-  padding: 24px ;
+  padding:24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close{
@@ -607,14 +612,16 @@ button{
   border-radius: 50%;
   background-color:#e7e9fc;
   border:1px solid rgba(0, 0, 0, 0.1);
-  transition:background-color 250ms ease-in-out,
-  fill 250ms ease-in-out;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
 }
 
 .modal-close:hover,
 .modal-close:focus{
   background-color: #404bbf;
   fill: #fff;
+  border: none
 }
 
 
@@ -652,8 +659,7 @@ button{
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
-  transition: fill 250ms ease-in-out;
-  
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-input:focus ~ svg{
