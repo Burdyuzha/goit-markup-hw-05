@@ -508,7 +508,7 @@ button{
   height: 40px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   padding:8px 16px ;
-  background-color: #2e2f42;
+  background-color: transparent;
   margin-right: 24px;
   transition:border-color 250ms ease-in-out ;
   color: #fff;
@@ -532,10 +532,13 @@ button{
 }
 
 .footer-form-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   border-radius: 4px;
   padding: 8px 24px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   background-color: #4d5ae5;
   font-weight: 500;
@@ -552,15 +555,8 @@ button{
   background-color: #31d0aa;
 }
 
-.footer-form-btn-text{
-  display: flex;
-  gap: 16px;
-}
-
 .footer-form-svg{
-  position: absolute;
-  top: 10px;
-  right: 24px;
+  margin-left: 16px;
   fill: #fff;
 }
 /* modal */
