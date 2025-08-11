@@ -62,7 +62,8 @@
       <section class="solution">
         <div class="container">
           <h1 class="solution-title">Effective Solutions for Your Business</h1>
-          <button class="solution-button" type="button">Order Service</button>
+          <button class="solution-button" type="button" data-modal-open>Order
+            Service</button>
         </div>
       </section>
       <!-- about -->
@@ -466,12 +467,26 @@
             </li>
           </ul>
         </div>
+        <div class="footer-form-block">
+          <p class="footer-form-block-text">Subscribe</p>
+          <form class="footer-form">
+            <input class="footer-form-input" type="email" placeholder="E-mail"
+              id="footer-form-input">
+            <label for="footer-form-input"></label>
+            <button class="footer-form-btn" type="submit"><span
+                class="footer-form-btn-text">Subscribe</span>
+              <svg class="footer-form-svg" width="24" height="24">
+                <use href="./images/icons.svg#icon-frame-footer-btn"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
 
-    <div class="modal">
+    <div class="modal" data-modal>
       <div class="modal-wrapper">
-        <button class="modal-close" type="button">
+        <button class="modal-close" type="button" data-modal-close>
           <svg class="modal-close-svg" width="8" height="8">
             <use href="./images/icons.svg#icon-close-form-btn"></use>
           </svg>
@@ -483,7 +498,8 @@
 
         <form class="modal-form">
           <div class="modal-form-item">
-            <label class="modal-form-label" for="modal-form-name">Name</label>
+            <label class="modal-form-label"
+              for="modal-form-name">Name</label>
             <div class="modal-form-input-block">
               <input class="modal-form-input" id="modal-form-name"
                 name="modal-form-name" type="text">
@@ -495,7 +511,8 @@
           </div>
 
           <div class="modal-form-item">
-            <label class="modal-form-label" for="modal-form-phone">Phone</label>
+            <label class="modal-form-label"
+              for="modal-form-phone">Phone</label>
             <div class="modal-form-input-block">
               <input class="modal-form-input" id="modal-form-phone"
                 name="modal-form-phone" type="tel">
@@ -506,7 +523,8 @@
           </div>
 
           <div class="modal-form-item">
-            <label class="modal-form-label" for="modal-form-email">Email</label>
+            <label class="modal-form-label"
+              for="modal-form-email">Email</label>
             <div class="modal-form-input-block">
               <input class="modal-form-input" id="modal-form-email"
                 name="modal-form-email" type="email">
@@ -527,7 +545,7 @@
           <div class="modal-form-checkbox-block">
             <input type="checkbox" name="modal-form-checkbox"
               id="modal-form-checkbox"
-              class="modal-form-checkbox-imput visually-hidden">
+              class="modal-form-checkbox-input visually-hidden">
             <label class="modal-form-checkbox-label"
               for="modal-form-checkbox">
               <span
@@ -535,17 +553,18 @@
                 <svg width="10" height="8">
                   <use href="./images/icons.svg#icon-Vector-form-btn"></use>
                 </svg>
-              </span>I
+              </span>
+              I
               accept the terms and
               conditions of the <a
-                class="form-privacy" href>Privacy
+                class="form-privacy" href"#"">Privacy
                 Policy</a>
             </label>
           </div>
           <button class="modal-form-btn-submit" type="submit">Send</button>
         </form>
       </div>
-
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
