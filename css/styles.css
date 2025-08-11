@@ -484,9 +484,7 @@ button{
 }
 
 .footer-form-block{
-  display: flex;
-  flex-direction: column;
-  gap: 16px
+  margin-left: auto;
 }
 
 .footer-form-block-text{
@@ -495,6 +493,12 @@ button{
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
+  margin-bottom: 16px;
+}
+
+.footer-form{
+  display: flex;
+  gap: 24px;
 }
 
 .footer-form-input{
